@@ -12,8 +12,8 @@ def showMenu():
     print("9.- Exit")
     option = int(input("Choose an option:"))
     return option
-def addNumber():
-    num = int(input("Input a number"))
+
+def addNumber(num):
     theList.append(num)
 
 def addNumberAtPos(num, pos):
@@ -36,7 +36,8 @@ def deleteAtPos(pos):
 while True:
     option = showMenu()
     if option == 1:
-        addNumber()
+        num = int(input("Input a number"))
+        addNumber(num)
     elif option == 2:
         num = int(input("Input a number"))
         pos = int(input("Input the position"))
